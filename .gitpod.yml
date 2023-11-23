@@ -1,0 +1,20 @@
+image: gitpod/workspace-full
+
+tasks:
+  - init: >
+      # Update package manager
+      sudo apt-get update
+
+      # Install prerequisites for Linux
+      sudo apt-get install -y curl git-all cmake gcc libssl-dev pkg-config libclang-dev libpq-dev build-essential
+
+      # Install Rust and Cargo
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      source $HOME/.cargo/env
+
+      # Update Rust to the stable version
+      rustup update stable
+
+    command: >
+      # Install Sui binaries from source
+      cargo install --locked --git https://github.com/MystenLabs/sui.git --branch testnet sui
