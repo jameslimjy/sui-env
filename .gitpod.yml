@@ -15,6 +15,9 @@ tasks:
       # Update Rust to the stable version
       rustup update stable
 
-    command: >
-      # Install Sui binaries from source
+      # Install Sui binaries from the testnet branch
       cargo install --locked --git https://github.com/MystenLabs/sui.git --branch testnet sui
+
+    command: >
+      # Check for updates in the Sui binaries from the devnet branch
+      cargo install --locked --git https://github.com/MystenLabs/sui.git --branch devnet sui
