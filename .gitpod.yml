@@ -19,5 +19,3 @@ tasks:
       cargo install --locked --git https://github.com/MystenLabs/sui.git --branch testnet sui
 
     command: >
-      # Check for updates in the Sui binaries from the devnet branch
-      cargo install --locked --git https://github.com/MystenLabs/sui.git --branch devnet sui
