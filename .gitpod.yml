@@ -14,5 +14,3 @@ tasks:
 
       # Update Rust to the stable version
       rustup update stable
-
-    command: >
